@@ -277,25 +277,40 @@ select:focus, .text-input:focus {
 }
 
 #submitBtn {
-    width: 100%;
-    padding: 16px;
-    border: none;
-    border-radius: 12px;
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: white;
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.2rem;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 1.1rem;
     font-weight: 600;
+    font-family: 'Outfit', sans-serif;
     cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
     position: relative;
     overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 10px 20px -10px rgba(236, 72, 153, 0.5);
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
 }
 
-#submitBtn:hover {
+button:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 15px 25px -10px rgba(236, 72, 153, 0.6);
+    box-shadow: 0 15px 25px rgba(79, 70, 229, 0.4);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+button.loading {
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3); }
+    100% { transform: scale(0.98); box-shadow: 0 5px 15px rgba(79, 70, 229, 0.6); }
 }
 
 #submitBtn:active {

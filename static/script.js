@@ -184,8 +184,16 @@ document.addEventListener("DOMContentLoaded", async () => {
         const yy = String(today.getFullYear()).slice(-2);
         const filename = `${prefix}-${dd}-${mm}-${yy}.xlsx`;
 
-        // Show loading
+        // Show loading overlay (kitten animation)
         loadingOverlay.classList.remove("hidden");
+
+        const submitBtn = document.getElementById("submitBtn");
+        const submitSpan = submitBtn.querySelector("span");
+        const originalText = submitSpan.textContent;
+        
+        submitSpan.textContent = "Generando...";
+        submitBtn.disabled = true;
+        submitBtn.classList.add("loading");
 
         try {
             const response = await fetch("/api/scrape", {
@@ -214,6 +222,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             alert("Failed to extract data.");
         } finally {
             loadingOverlay.classList.add("hidden");
+            submitSpan.textContent = originalText;
+            submitBtn.disabled = false;
+            submitBtn.classList.remove("loading");
         }
     });
 });
