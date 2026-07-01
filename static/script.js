@@ -14,32 +14,61 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     function renderFilters(filters) {
+        // Create containers
+        const basicFiltersGrid = document.createElement("div");
+        basicFiltersGrid.className = "basic-filters-grid";
+        
+        const advancedFiltersContainer = document.createElement("div");
+        advancedFiltersContainer.className = "advanced-filters-container";
+        
         for (const [key, filter] of Object.entries(filters)) {
             const group = document.createElement("div");
             group.className = "filter-group";
 
-            const label = document.createElement("label");
-            label.className = "group-label";
-            label.textContent = filter.label;
-            group.appendChild(label);
+            if (filter.type === "select" || filter.type === "text") {
+                const label = document.createElement("label");
+                label.className = "group-label";
+                label.textContent = filter.label;
+                group.appendChild(label);
 
-            if (filter.type === "select") {
-                const select = document.createElement("select");
-                select.name = key;
+                if (filter.type === "select") {
+                    const select = document.createElement("select");
+                    select.name = key;
+                    
+                    const defaultOpt = document.createElement("option");
+                    defaultOpt.value = "";
+                    defaultOpt.textContent = "Any";
+                    select.appendChild(defaultOpt);
+
+                    filter.options.forEach(opt => {
+                        const option = document.createElement("option");
+                        option.value = opt.value;
+                        option.textContent = opt.label;
+                        select.appendChild(option);
+                    });
+                    group.appendChild(select);
+                } else if (filter.type === "text") {
+                    const textInput = document.createElement("input");
+                    textInput.type = "text";
+                    textInput.name = key;
+                    textInput.className = "text-input";
+                    textInput.placeholder = "Enter " + filter.label;
+                    group.appendChild(textInput);
+                }
+                basicFiltersGrid.appendChild(group);
                 
-                const defaultOpt = document.createElement("option");
-                defaultOpt.value = "";
-                defaultOpt.textContent = "Any";
-                select.appendChild(defaultOpt);
-
-                filter.options.forEach(opt => {
-                    const option = document.createElement("option");
-                    option.value = opt.value;
-                    option.textContent = opt.label;
-                    select.appendChild(option);
-                });
-                group.appendChild(select);
             } else if (filter.type === "checkboxes") {
+                // Create Accordion for checkboxes to save space
+                const accordion = document.createElement("div");
+                accordion.className = "accordion";
+                
+                const accordionHeader = document.createElement("div");
+                accordionHeader.className = "accordion-header";
+                accordionHeader.innerHTML = `<span>${filter.label}</span> <i class="arrow down"></i>`;
+                
+                const accordionContent = document.createElement("div");
+                accordionContent.className = "accordion-content";
+
                 const checkboxGroup = document.createElement("div");
                 checkboxGroup.className = "checkbox-group";
 
@@ -49,8 +78,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                     
                     const inp = document.createElement("input");
                     inp.type = "checkbox";
-                    inp.name = key; // Group name, but we will serialize as array
-                    inp.value = opt.name; // The actual name of the input in RID
+                    inp.name = key;
+                    inp.value = opt.name;
                     
                     const text = document.createTextNode(opt.label);
                     
@@ -58,17 +87,36 @@ document.addEventListener("DOMContentLoaded", async () => {
                     lbl.appendChild(text);
                     checkboxGroup.appendChild(lbl);
                 });
-                group.appendChild(checkboxGroup);
-            } else if (filter.type === "text") {
-                const textInput = document.createElement("input");
-                textInput.type = "text";
-                textInput.name = key;
-                textInput.className = "text-input";
-                textInput.placeholder = "Enter " + filter.label;
-                group.appendChild(textInput);
+                
+                accordionContent.appendChild(checkboxGroup);
+                accordion.appendChild(accordionHeader);
+                accordion.appendChild(accordionContent);
+                
+                // Toggle logic
+                accordionHeader.addEventListener("click", () => {
+                    accordion.classList.toggle("active");
+                    const arrow = accordionHeader.querySelector(".arrow");
+                    if (accordion.classList.contains("active")) {
+                        arrow.classList.remove("down");
+                        arrow.classList.add("up");
+                    } else {
+                        arrow.classList.remove("up");
+                        arrow.classList.add("down");
+                    }
+                });
+                
+                advancedFiltersContainer.appendChild(accordion);
             }
-
-            filtersContainer.appendChild(group);
+        }
+        
+        filtersContainer.appendChild(basicFiltersGrid);
+        
+        if (advancedFiltersContainer.children.length > 0) {
+            const advancedTitle = document.createElement("h3");
+            advancedTitle.className = "advanced-title";
+            advancedTitle.textContent = "Advanced Filters";
+            filtersContainer.appendChild(advancedTitle);
+            filtersContainer.appendChild(advancedFiltersContainer);
         }
     }
 
