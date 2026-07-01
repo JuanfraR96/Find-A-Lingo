@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const submitSpan = submitBtn.querySelector("span");
         const originalText = submitSpan.textContent;
         
-        submitSpan.textContent = "Generando...";
+        submitSpan.textContent = "Generating...";
         submitBtn.disabled = true;
         submitBtn.classList.add("loading");
 
