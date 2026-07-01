@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find-A-Lingo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="glass-panel">
+        <header>
+            <h1>Find-A-Lingo</h1>
+            <p>RID Member Scraper Tool</p>
+        </header>
+
+        <form id="scrapeForm">
+            <div id="filtersContainer" class="filters-grid">
+                <!-- Filters will be injected here dynamically -->
+            </div>
+            
+            <button type="submit" id="submitBtn">
+                <span>Start Extraction</span>
+                <div class="shine"></div>
+            </button>
+        </form>
+
+        <div id="loadingOverlay" class="hidden">
+            <div class="glass-panel loader-panel">
+                <!-- Kitten with yarn animation -->
+                <div class="cat-loader">
+                    <svg viewBox="0 0 100 100" class="cat">
+                        <!-- Head -->
+                        <circle cx="50" cy="50" r="25" fill="#333" />
+                        <!-- Ears -->
+                        <polygon points="30,35 25,10 45,28" fill="#333" />
+                        <polygon points="70,35 75,10 55,28" fill="#333" />
+                        <!-- Eyes -->
+                        <circle cx="40" cy="45" r="4" fill="#fff" />
+                        <circle cx="60" cy="45" r="4" fill="#fff" />
+                        <circle cx="40" cy="45" r="2" fill="#000" class="pupil" />
+                        <circle cx="60" cy="45" r="2" fill="#000" class="pupil" />
+                        <!-- Nose -->
+                        <polygon points="48,52 52,52 50,55" fill="#ff9999" />
+                        <!-- Paws -->
+                        <path d="M 35 70 Q 30 80 40 85" fill="none" stroke="#333" stroke-width="8" stroke-linecap="round" class="paw paw-left" />
+                        <path d="M 65 70 Q 70 80 60 85" fill="none" stroke="#333" stroke-width="8" stroke-linecap="round" class="paw paw-right" />
+                    </svg>
+                    <!-- Yarn Ball -->
+                    <div class="yarn-ball">
+                        <svg viewBox="0 0 50 50">
+                            <circle cx="25" cy="25" r="20" fill="#ff4d4d" />
+                            <path d="M 10 20 Q 25 10 40 20" fill="none" stroke="#cc0000" stroke-width="2" />
+                            <path d="M 15 30 Q 25 40 35 30" fill="none" stroke="#cc0000" stroke-width="2" />
+                            <path d="M 20 10 Q 30 25 20 40" fill="none" stroke="#cc0000" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+                <h2>Scraping Data...</h2>
+                <p>Please wait, it might take a couple of minutes to fetch all members.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

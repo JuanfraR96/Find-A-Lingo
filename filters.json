@@ -1,0 +1,762 @@
+{
+  "ctl00$FormContentPlaceHolder$Panel$firstNameTextBox": {
+    "type": "text",
+    "label": "First Name"
+  },
+  "ctl00$FormContentPlaceHolder$Panel$lastNameTextBox": {
+    "type": "text",
+    "label": "Last Name"
+  },
+  "ctl00$FormContentPlaceHolder$Panel$emailTextBox": {
+    "type": "text",
+    "label": "Email"
+  },
+  "ctl00$FormContentPlaceHolder$Panel$cityTextBox": {
+    "type": "text",
+    "label": "City"
+  },
+  "ctl00$FormContentPlaceHolder$Panel$stateDropDownList": {
+    "type": "select",
+    "label": "State",
+    "options": [
+      {
+        "value": "d8fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Alabama"
+      },
+      {
+        "value": "dafcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Alaska"
+      },
+      {
+        "value": "befcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Alberta"
+      },
+      {
+        "value": "dcfcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Arizona"
+      },
+      {
+        "value": "defcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Arkansas"
+      },
+      {
+        "value": "e0fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Armed Forces Africa"
+      },
+      {
+        "value": "e2fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Armed Forces America"
+      },
+      {
+        "value": "e4fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Armed Forces Canada"
+      },
+      {
+        "value": "e6fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Armed Forces Europe"
+      },
+      {
+        "value": "e8fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Armed Forces Middle East"
+      },
+      {
+        "value": "eafcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Armed Forces Pacific"
+      },
+      {
+        "value": "c0fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "British Columbia"
+      },
+      {
+        "value": "ecfcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "California"
+      },
+      {
+        "value": "eefcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Colorado"
+      },
+      {
+        "value": "f0fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Connecticut"
+      },
+      {
+        "value": "f2fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Delaware"
+      },
+      {
+        "value": "f4fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "District of Columbia"
+      },
+      {
+        "value": "f6fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Florida"
+      },
+      {
+        "value": "f8fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Georgia"
+      },
+      {
+        "value": "fafcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Guam"
+      },
+      {
+        "value": "fcfcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Hawaii"
+      },
+      {
+        "value": "fefcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Idaho"
+      },
+      {
+        "value": "00fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Illinois"
+      },
+      {
+        "value": "02fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Indiana"
+      },
+      {
+        "value": "04fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Iowa"
+      },
+      {
+        "value": "06fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Kansas"
+      },
+      {
+        "value": "08fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Kentucky"
+      },
+      {
+        "value": "0afdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Louisiana"
+      },
+      {
+        "value": "0cfdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Maine"
+      },
+      {
+        "value": "c2fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Manitoba"
+      },
+      {
+        "value": "0efdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Maryland"
+      },
+      {
+        "value": "10fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Massachusetts"
+      },
+      {
+        "value": "12fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Michigan"
+      },
+      {
+        "value": "14fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Minnesota"
+      },
+      {
+        "value": "16fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Mississippi"
+      },
+      {
+        "value": "18fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Missouri"
+      },
+      {
+        "value": "1afdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Montana"
+      },
+      {
+        "value": "1cfdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Nebraska"
+      },
+      {
+        "value": "1efdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Nevada"
+      },
+      {
+        "value": "c4fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "New Brunswick"
+      },
+      {
+        "value": "20fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "New Hampshire"
+      },
+      {
+        "value": "22fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "New Jersey"
+      },
+      {
+        "value": "24fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "New Mexico"
+      },
+      {
+        "value": "26fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "New York"
+      },
+      {
+        "value": "c6fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Newfoundland and Labrador"
+      },
+      {
+        "value": "28fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "North Carolina"
+      },
+      {
+        "value": "2afdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "North Dakota"
+      },
+      {
+        "value": "c8fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Northwest Territories"
+      },
+      {
+        "value": "cafcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Nova Scotia"
+      },
+      {
+        "value": "ccfcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Nunavut"
+      },
+      {
+        "value": "2cfdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Ohio"
+      },
+      {
+        "value": "2efdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Oklahoma"
+      },
+      {
+        "value": "cefcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Ontario"
+      },
+      {
+        "value": "30fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Oregon"
+      },
+      {
+        "value": "32fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Pennsylvania"
+      },
+      {
+        "value": "d0fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Prince Edward Island"
+      },
+      {
+        "value": "34fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Puerto Rico"
+      },
+      {
+        "value": "d2fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Quebec"
+      },
+      {
+        "value": "36fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Rhode Island"
+      },
+      {
+        "value": "d4fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Saskatchewan"
+      },
+      {
+        "value": "38fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "South Carolina"
+      },
+      {
+        "value": "3afdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "South Dakota"
+      },
+      {
+        "value": "3cfdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Tennessee"
+      },
+      {
+        "value": "3efdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Texas"
+      },
+      {
+        "value": "40fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Utah"
+      },
+      {
+        "value": "42fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Vermont"
+      },
+      {
+        "value": "44fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Virgin Islands"
+      },
+      {
+        "value": "46fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Virginia"
+      },
+      {
+        "value": "48fdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Washington"
+      },
+      {
+        "value": "4afdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "West Virginia"
+      },
+      {
+        "value": "4cfdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Wisconsin"
+      },
+      {
+        "value": "4efdccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Wyoming"
+      },
+      {
+        "value": "d6fcccc5-cf2f-e511-80c5-00155d631510",
+        "label": "Yukon"
+      }
+    ]
+  },
+  "ctl00$FormContentPlaceHolder$Panel$zipRadiusDropDownList": {
+    "type": "select",
+    "label": "Find all ZIP Codes within",
+    "options": [
+      {
+        "value": "5",
+        "label": "5 Miles"
+      },
+      {
+        "value": "10",
+        "label": "10 Miles"
+      },
+      {
+        "value": "15",
+        "label": "15 Miles"
+      },
+      {
+        "value": "20",
+        "label": "20 Miles"
+      },
+      {
+        "value": "25",
+        "label": "25 Miles"
+      },
+      {
+        "value": "30",
+        "label": "30 Miles"
+      },
+      {
+        "value": "35",
+        "label": "35 Miles"
+      },
+      {
+        "value": "40",
+        "label": "40 Miles"
+      },
+      {
+        "value": "45",
+        "label": "45 Miles"
+      },
+      {
+        "value": "50",
+        "label": "50 Miles"
+      },
+      {
+        "value": "55",
+        "label": "55 Miles"
+      },
+      {
+        "value": "60",
+        "label": "60 Miles"
+      },
+      {
+        "value": "65",
+        "label": "65 Miles"
+      },
+      {
+        "value": "70",
+        "label": "70 Miles"
+      },
+      {
+        "value": "75",
+        "label": "75 Miles"
+      },
+      {
+        "value": "80",
+        "label": "80 Miles"
+      },
+      {
+        "value": "85",
+        "label": "85 Miles"
+      },
+      {
+        "value": "90",
+        "label": "90 Miles"
+      },
+      {
+        "value": "95",
+        "label": "95 Miles"
+      },
+      {
+        "value": "100",
+        "label": "100 Miles"
+      }
+    ]
+  },
+  "ctl00$FormContentPlaceHolder$Panel$categoryDropDownList": {
+    "type": "select",
+    "label": "Category",
+    "options": [
+      {
+        "value": "02d93fdf-8db4-4f2f-a7bc-733e7538b59f",
+        "label": "Associate"
+      },
+      {
+        "value": "6c2824ed-09a0-4e75-90f4-4b0c327d59dc",
+        "label": "Student"
+      },
+      {
+        "value": "a027b6c0-07bb-4301-b9b5-1b38dcdc59b6",
+        "label": "Certified"
+      },
+      {
+        "value": "0507efe4-e10f-4e91-bcc1-15fee5ec4348",
+        "label": "Supporting"
+      },
+      {
+        "value": "4093285c-f9f0-e511-80cc-00155d24c809",
+        "label": "Certified: Inactive"
+      },
+      {
+        "value": "86851b7b-f9f0-e511-80cc-00155d24c809",
+        "label": "Certified: Retired"
+      }
+    ]
+  },
+  "ctl00$FormContentPlaceHolder$Panel$freelanceDropDownList": {
+    "type": "select",
+    "label": "Freelance Status",
+    "options": [
+      {
+        "value": "1",
+        "label": "Yes"
+      },
+      {
+        "value": "0",
+        "label": "No"
+      }
+    ]
+  },
+  "ctl00$FormContentPlaceHolder$Panel$genderDropDownList": {
+    "type": "select",
+    "label": "Gender",
+    "options": [
+      {
+        "value": "1",
+        "label": "Male"
+      },
+      {
+        "value": "2",
+        "label": "Female"
+      },
+      {
+        "value": "533470000",
+        "label": "Non-Binary"
+      },
+      {
+        "value": "533470001",
+        "label": "Prefer to Self-Describe"
+      },
+      {
+        "value": "416250000",
+        "label": "Trans Man"
+      },
+      {
+        "value": "416250001",
+        "label": "Trans Woman"
+      },
+      {
+        "value": "416250002",
+        "label": "Genderqueer"
+      },
+      {
+        "value": "416250003",
+        "label": "Non-Binary"
+      },
+      {
+        "value": "416250004",
+        "label": "Intersex"
+      },
+      {
+        "value": "416250005",
+        "label": "Two Spirit"
+      },
+      {
+        "value": "416250006",
+        "label": "Agender"
+      },
+      {
+        "value": "416250007",
+        "label": "Questioning"
+      },
+      {
+        "value": "416250008",
+        "label": "Queer"
+      },
+      {
+        "value": "416250009",
+        "label": "Gender Fluid"
+      },
+      {
+        "value": "416250010",
+        "label": "Transgender"
+      },
+      {
+        "value": "533470002",
+        "label": "Prefer Not to Answer"
+      }
+    ]
+  },
+  "FormContentPlaceHolder_Panel_certificatesCheckBoxList": {
+    "type": "checkboxes",
+    "label": "Certificates",
+    "options": [
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$0",
+        "label": "CDI"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$1",
+        "label": "CI"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$2",
+        "label": "CLIP-R"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$3",
+        "label": "CSC"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$4",
+        "label": "CT"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$5",
+        "label": "Ed:K-12"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$6",
+        "label": "EIC"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$7",
+        "label": "ETC"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$8",
+        "label": "IC"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$9",
+        "label": "IC/TC"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$10",
+        "label": "MCSC"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$11",
+        "label": "NAD III"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$12",
+        "label": "NAD IV"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$13",
+        "label": "NAD V"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$14",
+        "label": "NIC"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$15",
+        "label": "NIC Advanced"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$16",
+        "label": "NIC Master"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$17",
+        "label": "OIC:C"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$18",
+        "label": "OIC:S/V"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$19",
+        "label": "OIC:V/S"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$20",
+        "label": "OTC"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$21",
+        "label": "RSC"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$22",
+        "label": "SC:L"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$23",
+        "label": "SC:PA"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$certificatesCheckBoxList$24",
+        "label": "TC"
+      }
+    ]
+  },
+  "FormContentPlaceHolder_Panel_AdditionalSkillsCheckBoxList": {
+    "type": "checkboxes",
+    "label": "Additional Languages or Specialties",
+    "options": [
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$0",
+        "label": "Close vision"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$1",
+        "label": "Concert"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$2",
+        "label": "Conference Interpreting"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$3",
+        "label": "Cruise"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$4",
+        "label": "Cued language transliterators"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$5",
+        "label": "Deaf Interpreter"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$6",
+        "label": "Domestic and Sexual Violence"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$7",
+        "label": "Foreign Sign Languages"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$8",
+        "label": "Government (Federal, State and local)"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$9",
+        "label": "Medical Emergency"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$10",
+        "label": "Medical Non-Emergency"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$11",
+        "label": "Mental Health"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$12",
+        "label": "Natural Disasters"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$13",
+        "label": "Oral Transliterating"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$14",
+        "label": "Performing arts"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$15",
+        "label": "Platform Interpreting"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$16",
+        "label": "Post-secondary Education"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$17",
+        "label": "Press Conferences"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$18",
+        "label": "Prison/Jail"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$19",
+        "label": "ProTactile"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$20",
+        "label": "Religious"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$21",
+        "label": "Science"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$22",
+        "label": "Support Groups (AA, NA, etc.)"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$23",
+        "label": "Technology"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$24",
+        "label": "Trilingual"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$25",
+        "label": "VRI"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$AdditionalSkillsCheckBoxList$26",
+        "label": "VRS"
+      }
+    ]
+  },
+  "FormContentPlaceHolder_Panel_ethnicityCheckBoxList": {
+    "type": "checkboxes",
+    "label": "Ethnicities",
+    "options": [
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$ethnicityCheckBoxList$0",
+        "label": "African American"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$ethnicityCheckBoxList$1",
+        "label": "Euro American"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$ethnicityCheckBoxList$2",
+        "label": "Asian American"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$ethnicityCheckBoxList$3",
+        "label": "American Indian"
+      },
+      {
+        "name": "ctl00$FormContentPlaceHolder$Panel$ethnicityCheckBoxList$4",
+        "label": "Hispanic"
+      }
+    ]
+  }
+}
