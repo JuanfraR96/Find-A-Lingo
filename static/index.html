@@ -19,7 +19,13 @@
             <p>RID Member Scraper Tool</p>
         </header>
 
+        <div class="registry-tabs">
+            <button class="registry-tab active" data-registry="rid">RID Registry</button>
+            <button class="registry-tab" data-registry="cmi">CMI Registry</button>
+        </div>
+
         <form id="scrapeForm">
+            <input type="hidden" name="registry" id="registryInput" value="rid">
             <div id="filtersContainer">
                 <!-- Filters will be injected here dynamically -->
             </div>

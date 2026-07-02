@@ -2,15 +2,34 @@ document.addEventListener("DOMContentLoaded", async () => {
     const filtersContainer = document.getElementById("filtersContainer");
     const scrapeForm = document.getElementById("scrapeForm");
     const loadingOverlay = document.getElementById("loadingOverlay");
+    const registryInput = document.getElementById("registryInput");
+    const registryTabs = document.querySelectorAll(".registry-tab");
 
-    // Fetch filters from backend
-    try {
-        const response = await fetch("/api/filters");
-        const filters = await response.json();
-        renderFilters(filters);
-    } catch (e) {
-        console.error("Error loading filters:", e);
-        filtersContainer.innerHTML = "<p class='error'>Failed to load filters.</p>";
+    // Load initial filters
+    loadFilters("rid");
+
+    // Tab switching
+    registryTabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            registryTabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+            const reg = tab.dataset.registry;
+            registryInput.value = reg;
+            loadFilters(reg);
+        });
+    });
+
+    async function loadFilters(registry) {
+        filtersContainer.innerHTML = "<p>Loading filters...</p>";
+        try {
+            const response = await fetch(`/api/filters?registry=${registry}`);
+            const filters = await response.json();
+            filtersContainer.innerHTML = ""; // clear
+            renderFilters(filters);
+        } catch (e) {
+            console.error("Error loading filters:", e);
+            filtersContainer.innerHTML = "<p class='error'>Failed to load filters.</p>";
+        }
     }
 
     function renderFilters(filters) {
@@ -127,17 +146,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         const formData = new FormData(scrapeForm);
         const data = {};
         
-        // Handle selects and checkboxes
-        for (const [key, value] of formData.entries()) {
-            if (!value) continue;
-            // if it's a checkbox group, value is the actual target name
-            // Wait, we need to distinguish selects and checkboxes
-            const inputType = scrapeForm.querySelector(`[name="${key}"]`).type;
-            if (inputType === "checkbox" || inputType === "select-one" || !inputType) {
-                // If it's a checkbox group, the name is shared across multiple checkboxes
-                // Let's manually collect
-            }
-        }
+        // We include registry manually from our hidden input (it's already in formData but just in case)
+        data["registry"] = registryInput.value;
         
         // Manual collection for easier structure
         const selects = scrapeForm.querySelectorAll("select");
@@ -163,6 +173,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // Generate dynamic filename
         let filterLabels = [];
+        filterLabels.push(registryInput.value); // Add registry prefix
+        
         selects.forEach(s => {
             if (s.value && s.options[s.selectedIndex].text !== "Any") {
                 filterLabels.push(s.options[s.selectedIndex].text.toLowerCase().replace(/[^a-z0-9]/g, '-'));
@@ -176,7 +188,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         
         let prefix = filterLabels.length > 0 ? filterLabels.join('-') : "results";
         // truncate if too long
-        if (prefix.length > 30) prefix = prefix.substring(0, 30);
+        if (prefix.length > 40) prefix = prefix.substring(0, 40);
         
         const today = new Date();
         const dd = String(today.getDate()).padStart(2, '0');

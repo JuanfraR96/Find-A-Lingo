@@ -1,0 +1,565 @@
+
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />		
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="robots" content="index">
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://kit.fontawesome.com/cf67a1a8b9.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script>
+		
+		<style>
+			body {
+				font-size: 15px;
+			}
+			
+			.ce-icon-delete {
+				color: red;
+			}
+			
+			.j-btn-standard-form-submit {
+			  color: #fff;
+			  border-color: #69a73d;
+			  /**added**/
+			  background-color: #74b844;
+			}
+
+			.j-btn-standard-form-submit:hover {
+			  color: #fff;
+			  background-color: #69a73d;
+			  border-color: #69a73d;
+			}
+
+			.j-btn-standard-form-submit:focus, .j-btn-standard-form-submit.focus {
+			  box-shadow: none;
+			}
+
+			.j-btn-standard-form-submit.disabled, .j-btn-standard-form-submit:disabled {
+			  color: #69a73d;
+			  background-color: transparent;
+			}
+
+			.j-btn-standard-form-submit:not(:disabled):not(.disabled):active, .j-btn-standard-form-submit:not(:disabled):not(.disabled).active,
+			.show > .j-btn-standard-form-submit.dropdown-toggle {
+			  color: #fff;
+			  background-color: #69a73d;
+			  border-color: #69a73d;
+			}
+
+			.j-btn-standard-form-submit:not(:disabled):not(.disabled):active:focus, .j-btn-standard-form-submit:not(:disabled):not(.disabled).active:focus,
+			.show > .j-btn-standard-form-submit.dropdown-toggle:focus {
+			  box-shadow: none;
+			}
+			
+			/**********/
+			
+			.ce-btn-standard-form-submit-2 {
+			  color: #fff;
+			  border-color: #F37F23;
+			  /**added**/
+			  background-color: #F37F23;	/****/
+			}
+
+			.ce-btn-standard-form-submit-2:hover {
+			  color: #F37F23;
+			  background-color: #fff;
+			  border-color: #F37F23;
+			}
+
+			.ce-btn-standard-form-submit-2:focus, .ce-btn-standard-form-submit-2.focus {
+			  box-shadow: none;
+			}
+
+			.ce-btn-standard-form-submit-2.disabled, .ce-btn-standard-form-submit-2:disabled {
+			  color: #6c757d;
+			  background-color: transparent;
+			}
+
+			.ce-btn-standard-form-submit-2:not(:disabled):not(.disabled):active, .ce-btn-standard-form-submit-2:not(:disabled):not(.disabled).active,
+			.show > .ce-btn-standard-form-submit-2.dropdown-toggle {
+			  color: #F37F23;
+			  background-color: #fff;
+			  border-color: #F37F23;
+			}
+
+			.ce-btn-standard-form-submit-2:not(:disabled):not(.disabled):active:focus, .ce-btn-standard-form-submit-2:not(:disabled):not(.disabled).active:focus,
+			.show > .ce-btn-standard-form-submit-2.dropdown-toggle:focus {
+			  box-shadow: none;
+			}			
+			
+		</style>
+		
+		<script LANGUAGE="JavaScript">
+		var nWin
+		function mPopUp(tzURL,tzName,tzWidth,tzHeight,tzTop,tzLeft,tzStatus,tzToolBar,tzLocation,tzMenuBar,tzDirectories,tzScroll,tzResize)
+		{
+			if (!nWin || nWin.closed)
+			{
+				//tzHeight = screen.height * 0.80;
+				//tzWidth = screen.width * 0.80;
+				
+				nWin = window.open(tzURL,tzName,"TOP=5,HEIGHT=" + tzHeight + ",LEFT=5,WIDTH=" + tzWidth + ",location=no,toolbar=no,titlebar=no,menubar=no,scrollbars=yes,resizable=yes")
+				if (!nWin.opener)
+				{
+					nWin.opener = window
+				}
+				nWin.focus()
+			}
+			else
+			{
+				nWin.close()
+				
+				//tzHeight = screen.height;
+				//tzWidth = screen.width;
+				
+				nWin = window.open(tzURL,tzName,"TOP=5,HEIGHT=" + tzHeight + ",LEFT=5,WIDTH=" + tzWidth + ",location=no,toolbar=no,titlebar=no,menubar=no,scrollbars=yes,resizable=yes")
+				if (!nWin.opener)
+				{
+					nWin.opener = window
+				}
+				nWin.focus()
+			}    
+		}
+		</script>		
+		
+	</head>
+	
+	<body>
+		<div style="padding: 0 10px 0 5px; border-bottom: 1px solid #B9191A;">
+			<form id="SearchForm" method="post" action="mc_registry.asp">
+				<input type="hidden" id="Mode" name="Mode" value="2">
+
+				<!--
+				<div class="row">			
+					<div class="form-group col-sm-6">
+						<label for="cmi_no">CMI No.:</label>
+						<input type="text" class="form-control" id="cmi_no" name="cmi_no">
+					</div>
+					
+					<div class="form-group col-sm-6">
+						<label for="cmi_no">CMI Language:</label>
+						<select class="form-control" id="cmi_no" name="cmi_no">
+							<option value=""></option>
+							<option value="Cantonese">Cantonese</option>							
+							<option value="Korean">Korean</option>							
+							<option value="Mandarin">Mandarin</option>
+							<option value="Russian">Russian</option>
+							<option value="Spanish">Spanish</option>
+							<option value="Vietnamese">Vietnamese</option>
+						</select>
+					</div>			
+				</div>
+				
+				<div class="row">
+					<div class="form-group col-sm-6">
+						<label for="cmi_no">First Name:</label>
+						<input type="text" class="form-control" id="cmi_no" name="cmi_no">
+					</div>			
+					
+					<div class="form-group col-sm-6">
+						<label for="cmi_no">Last Name:</label>
+						<input type="text" class="form-control" id="cmi_no" name="cmi_no">
+					</div>
+				</div>
+				-->
+				
+				<p>Welcome to the NBCMI Interpreter Registry. This listing is made available to the public and anyone seeking an NBCMI credentialed medical interpreter. You can search the directory by language, state, certification type, name, or CMI or Hub-CMI number.</p>
+				<p>All active interpreters are automatically included on the NBCMI Interpreter registry.  If you do not wish to continue being listed, please let us know and we will gladly remove your name from the listing.</p>
+				<p>There are some SCAM emails being sent to NBCMI members.  The writers claim to have a job offer from companies called Pharma Match, Abbvie, Custom Pharma Services, Biogen, Fresenius Medical Care, Pharma Group or Scinopharm.  Please ignore these emails!  You may also visit the following link for more information on scams to be aware of:</p>
+				<p><a target=_blank href="https://nbcmi.memberclicks.net/assets/docs/Updated_Registry_and_Cyberscam_Alert.pdf">https://nbcmi.memberclicks.net/assets/docs/Updated_Registry_and_Cyberscam_Alert.pdf</a></p>
+				<p>Please be cautious and report any potential scammer to your local authorities and the Internet Crime Complaint Center (IC3): <a target=_blank href="https://www.ic3.gov">www.ic3.gov</a>.</p>
+				
+				<hr>
+				
+				<div class="row">
+					<div class="form-group col-sm-12" style="margin-top: 0; margin-bottom: 0;">
+						<table style="margin: 0 5px 0 5px;">
+							<tr>
+								<td style="padding: 8px;">Display As</td>
+								<td style="padding: 8px;"><a href="mc_registry.asp?mode=3&view=list" style="color: #000;"><i title="List View" class="fa fa-list" aria-hidden="true"></i></a></td>
+								<td style="padding: 8px;"><a href="mc_registry.asp?mode=3&view=table" style="color: #000;"><i title="Table View" class="fa fa-table" aria-hidden="true"></i></a></td>
+							</tr>
+						</table>
+					</div>
+				
+					<div class="form-group col-sm-12 user-license-wrapper">
+						<table border=0 class="table" id="tableUserLicense" style="color: #888; font-size: 15px; font-family: 'Roboto', sans-serif;">
+							<tbody id="groupUserLicense">
+								<tr>
+									<td style="width: 40%; height: 10px; padding: 0; border-top: none;"></td>
+									<td style="width: 50%; height: 10px; padding: 0; border-top: none;"></td>
+									<td style="height: 10px; padding: 0; border-top: none;"></td>
+									<td style="width: 5px; height: 10px; padding: 0; border-top: none;"></td>									
+								</tr>								
+								<tr class="criteria-row"><td><select class="form-control form-control-sm attribute" name="Attribute"><option value="">Select a Criteria</option><option value="CmiType">Certification Type</option><option value="FirstName">First Name</option><option value="LastName">Last Name</option><option value="DateCertificateExpire">CMI / Hub-CMI Expiration</option><option value="CertifiedLanguage">CMI / Hub-CMI Language</option><option value="CmiNo">CMI / Hub-CMI No.</option><option value="WorkCity">Work City</option><option value="WorkState">Work State</option><option value="WorkCountry">Work Country</option></select></td><td class="v1"></td><td></td><td style="padding-top: 17px; white-space: nowrap; text-align: center;"><i class="fa fa-trash-o ce-icon-delete delete-row" aria-hidden="true"></i></td></tr>
+							</tbody>
+							
+							<tfoot>
+								<tr>
+									<td><button id="add-row" type="button" class="btn btn-block btn-sm ce-btn-standard-form-submit-2">Add Criteria</button></td>
+									<td></td>
+									<td></td>
+									<td></td>									
+								</tr>
+								
+								<!--
+								<tr>
+									<td></td>
+									<td style="padding-top: 30px;">
+										<div class="form-group">
+											<select class="form-control form-control-sm" name="Match">
+												<option value="All">Match All Criteria</option>
+												<option value="Any">Match Any Criteria</option>
+											</select>
+										</div>
+									</td>
+									<td></td>
+									<td></td>
+								</tr>
+								-->						
+							</tfoot>
+						</table>
+					</div>
+				</div>		
+				
+				<div class="row">
+					<div class="form-group col-sm-12" style="text-align: center; margin-bottom: 8px;">
+						<a id="ClearCriteria" class="btn btn-sm j-btn-standard-form-submit" style="width: 150px; color: #fff;">Clear Critiera</a>
+						<button type="submit" class="btn btn-sm j-btn-standard-form-submit" style="width: 150px;">Search</button>
+					</div>
+					<div class="form-group col-sm-12" style="text-align: center;"><span id="ViewAll" style="color: #F37F23">View Complete CMI/Hub-CMI Registry</span></div>					
+				</div>
+				
+			</form>
+		</div>
+		
+		<div style="margin-bottom: 100px;">
+			
+		</div>
+		
+
+		<!-- The Modal -->
+		<div class="modal" id="addBookDialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h4 class="modal-title">Contact  <span id="MemberName"></span></h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+
+					<!-- Modal body -->
+					<div class="modal-body">
+
+						<!--start form-->
+						<div id="MessageResult"></div>
+						
+						<div>
+							<form method="post" id="messageModal" action="send_message.asp">
+								<input type="hidden" name="Mode" value="2">
+								<input type="hidden" id="ProfileId" name="ProfileId">
+								<input type="hidden" id="ProfileEmail" name="ProfileEmail">				
+								
+								<div class="row">
+									<div class="form-group col-sm-12" id="SenderNameGroup">
+										<label for="SenderName">Your Name:</label>
+										<input type="text" class="form-control form-control-sm" id="SenderName" name="SenderName" aria-describedby="SenderNameHelpBlock">
+									</div>			
+								</div>
+
+								<div class="row">
+									<div class="form-group col-sm-12" id="SubjectGroup">
+										<label for="Subject">Subject:</label>
+										<input type="text" class="form-control form-control-sm" id="Subject" name="Subject" aria-describedby="SubjectHelpBlock">
+									</div>			
+								</div>				
+								
+								<div class="row">
+									<div class="form-group col-sm-6 col-md-6" id="SenderEmailGroup">
+										<label for="SenderEmail">Your Email:</label>
+										<input type="text" class="form-control form-control-sm" id="SenderEmail" name="SenderEmail" aria-describedby="SenderEmailHelpBlock">
+									</div>			
+									
+									<div class="form-group col-sm-6 col-md-6">
+										<label for="SenderPhone">Your Phone:</label>
+										<input type="text" class="form-control form-control-sm" id="SenderPhone" name="SenderPhone">
+									</div>					
+								</div>				
+
+								<div class="row">			
+									<div class="form-group col-sm-12" id="MessageGroup">
+										<label for="SenderMessage">Message:</label>
+										<textarea class="form-control" id="SenderMessage" name="SenderMessage" style="height: 100px;" aria-describedby="MessageHelpBlock"></textarea>
+									</div>
+								</div>
+							
+								<div class="row">
+									<div class="form-group col-sm-12 col-md-12" id="RecaptchaGroup">
+										<div class="g-recaptcha" data-sitekey="6LcpQeUUAAAAAKpZpo-ZEAZRzK3iT4oXJquMkQkZ"></div>
+									</div>
+
+									<div class="form-group col-sm-12 col-md-12">
+										<button type="submit" class="btn btn-sm btn-block j-btn-standard-form-submit">Send Message</button>
+									</div>
+								</div>
+							</form>
+						</div>						
+						<!-- End Form-->
+					</div>
+
+					<!-- Modal footer -->
+					<!--
+					<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					</div>
+					-->
+					
+				</div>
+			</div>
+		</div>		
+		
+		
+		
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>			
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		
+		<!--Used for calendar-->
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+				$('#PageNumber').on('change', function() {
+					document.forms['getPage'].submit();
+				});				
+
+				$("#ClearCriteria").on('click', function () {
+					$(".criteria-row").remove();
+				});
+				
+				$("#ViewAll").on('click', function () {
+					$(".criteria-row").remove();
+					$('input[name=Mode]').val("2"),					
+					document.forms['SearchForm'].submit();					
+				});				
+				
+				$("#ViewAll").hover(function () {
+					$('#ViewAll').css({"color": "#F37F23", "cursor": "pointer","font-weight": "bold"})
+				},
+					function () {
+						$('#ViewAll').css({"color": "#F37F23","cursor": "default", "font-weight": "normal"})					
+					}
+				);				
+				
+				$("#tableUserLicense").on('click', '#add-row', function () {
+					var markup = '<tr class="criteria-row">' + 
+									'<td><select class="form-control form-control-sm attribute" name="Attribute"><option value="">Select a Criteria</option><option value="CmiType">Certification Type</option><option value="FirstName">First Name</option><option value="LastName">Last Name</option><option value="DateCertificateExpire">CMI / Hub-CMI Expiration</option><option value="CertifiedLanguage">CMI / Hub-CMI Language</option><option value="CmiNo">CMI / Hub-CMI No.</option><option value="WorkCity">Work City</option><option value="WorkState">Work State</option><option value="WorkCountry">Work Country</option></select></td>' +
+									'<td class="v1"></td>' +
+									'<td></td>' +
+									'<td style="padding-top: 17px; white-space: nowrap; text-align: center;"><i class="fa fa-trash-o ce-icon-delete delete-row" aria-hidden="true"></i></td>' + 									
+								'</tr>'
+								
+					$("#groupUserLicense").append(markup);
+				});
+
+				$("#groupUserLicense").on('click', '.delete-row', function () {
+					$(this).closest('tr').remove();
+				});
+				
+				$("#groupUserLicense").on("change", ".attribute", function () {
+					var selectedAttribute = $(this).children("option:selected").val()
+					
+					if (selectedAttribute == 'CertifiedLanguage')
+					{
+						$(this).closest('tr').find('.v1').html('<select class="form-control form-control-sm" name="Criteria"><option value=""></option><option value="12/05/2027">12/05/2027</option><option value="Albanian">Albanian</option><option value="Amharic">Amharic</option><option value="Arabic">Arabic</option><option value="Armenian">Armenian</option><option value="ASL">ASL</option><option value="Bangla">Bangla</option><option value="Bengali">Bengali</option><option value="Bosnian">Bosnian</option><option value="Brazilian Portuguese">Brazilian Portuguese</option><option value="Bulgarian">Bulgarian</option><option value="Burmese">Burmese</option><option value="Cambodian">Cambodian</option><option value="Cambodian/Khmer">Cambodian/Khmer</option><option value="Cantonese">Cantonese</option><option value="Cebuado">Cebuado</option><option value="Cebuano">Cebuano</option><option value="Croatian">Croatian</option><option value="Czech">Czech</option><option value="Dari">Dari</option><option value="Dari, Farsi">Dari, Farsi</option><option value="Dari, Farsi,  Pashto">Dari, Farsi,  Pashto</option><option value="Dari/ Farsi">Dari/ Farsi</option><option value="Dari/Farsi">Dari/Farsi</option><option value="Dari/Pashto">Dari/Pashto</option><option value="Farsi">Farsi</option><option value="Farsi/Dari">Farsi/Dari</option><option value="French">French</option><option value="French/wolof">French/wolof</option><option value="Georgian">Georgian</option><option value="German">German</option><option value="Haitian Creole">Haitian Creole</option><option value="Haitian-Creole">Haitian-Creole</option><option value="Hebrew">Hebrew</option><option value="Hindi">Hindi</option><option value="Hmong">Hmong</option><option value="Hungarian">Hungarian</option><option value="Ilocano">Ilocano</option><option value="Italian">Italian</option><option value="Japanese">Japanese</option><option value="Karen / Burmese">Karen / Burmese</option><option value="Khmer">Khmer</option><option value="Kinyarwanda">Kinyarwanda</option><option value="Kirundi">Kirundi</option><option value="Korean">Korean</option><option value="Kurdic">Kurdic</option><option value="Kurdish">Kurdish</option><option value="Kurdish (Sorani)">Kurdish (Sorani)</option><option value="Lao">Lao</option><option value="Laotian">Laotian</option><option value="Lingala">Lingala</option><option value="Mandarin">Mandarin</option><option value="Marsallese">Marsallese</option><option value="Marshallese">Marshallese</option><option value="Mongolian">Mongolian</option><option value="Nepali">Nepali</option><option value="Panjabi">Panjabi</option><option value="Pashto">Pashto</option><option value="Persian">Persian</option><option value="Persian/Farsi">Persian/Farsi</option><option value="Polish">Polish</option><option value="Portuguese">Portuguese</option><option value="Portuguese -Brazilian">Portuguese -Brazilian</option><option value="Punjabi">Punjabi</option><option value="Romanian">Romanian</option><option value="Russian">Russian</option><option value="Serbian">Serbian</option><option value="Slovak">Slovak</option><option value="Somali">Somali</option><option value="Spanish">Spanish</option><option value="Swahili">Swahili</option><option value="Tagalog">Tagalog</option><option value="Tedim">Tedim</option><option value="Telugu">Telugu</option><option value="Thai">Thai</option><option value="Tigrigna">Tigrigna</option><option value="Tigrinya">Tigrinya</option><option value="Turkish">Turkish</option><option value="Ukrainian">Ukrainian</option><option value="Urdu">Urdu</option><option value="Uzbek">Uzbek</option><option value="Vietnamese">Vietnamese</option><option value="Yoruba">Yoruba</option></select>');					
+					}
+					else if (selectedAttribute == 'CmiType')
+					{
+						$(this).closest('tr').find('.v1').html('<select class="form-control form-control-sm" name="Criteria"><option value=""></option><option value="CMI">CMI</option><option value="Hub-CMI">Hub-CMI</option></select>');					
+					}										
+					else if (selectedAttribute == 'DateCertificateExpire')
+					{
+						$(this).closest('tr').find('.v1').html('<select class="form-control form-control-sm" name="Criteria"><option value=""></option><option value="7">Next 7 Days</option><option value="30">Next 30 Days</option><option value="90">Next 90 Days</option><option value="180">Next 6 Months</option><option value="365">Next 12 Months</option></select>');					
+					}					
+					else if (selectedAttribute == 'WorkState')
+					{
+						$(this).closest('tr').find('.v1').html('<select class="form-control form-control-sm" name="Criteria"><option value=""></option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VE">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select>');					
+					}
+					else if (selectedAttribute == 'WorkCountry')
+					{
+						$(this).closest('tr').find('.v1').html('<select class="form-control form-control-sm" name="Criteria"><option value=""></option><option value="AF">Afghanistan</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua & Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BT">Bhutan</option><option value="BO">Bolivia</option><option value="BA">Bosnia & Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="GB">Britain</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Rep.</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos (Keeling) Islands</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CD">Congo (Dem. Rep.)</option><option value="CG">Congo (Rep.)</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="CI">Cote dIvoire</option><option value="HR">Croatia</option><option value="CU">Cuba</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="TP">East Timor</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="UK">England</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="ET">Ethiopia</option><option value="FO">Faeroe Islands</option><option value="FK">Falkland Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="FX">France</option><option value="GF">French Guiana</option><option value="PF">French Polynesia</option><option value="TF">French Southern & Antarctic Lands</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard Island & McDonald Islands</option><option value="HN">Honduras</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="KG">Kirgizstan</option><option value="KI">Kiribati</option><option value="KP">Korea (North)</option><option value="KW">Kuwait</option><option value="LA">Laos</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macao</option><option value="MK">Macedonia</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar (Burma)</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="NL">Netherlands</option><option value="AN">Netherlands Antilles</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="MP">Northern Mariana Islands</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PS">Palestine</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="QA">Qatar</option><option value="KR">Republic of Korea</option><option value="RE">Reunion</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="RW">Rwanda</option><option value="AS">Samoa (American)</option><option value="WS">Samoa (Western)</option><option value="SM">San Marino</option><option value="GS">Sandwich Islands</option><option value="ST">Sao Tome & Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SH">St Helena</option><option value="KN">St Kitts & Nevis</option><option value="LC">St Lucia</option><option value="PM">St Pierre & Miquelon</option><option value="VC">St Vincent</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard & Jan Mayen</option><option value="SZ">Swaziland</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syria</option><option value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option value="TZ">Tanzania</option><option value="TH">Thailand</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad & Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks & Caicos Is</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="US">United States</option><option value="UY">Uruguay</option><option value="UM">US minor outlying islands</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VA">Vatican City</option><option value="VE">Venezuela</option><option value="VN">Vietnam</option><option value="VG">Virgin Islands (UK)</option><option value="VI">Virgin Islands (US)</option><option value="WF">Wallis & Futuna</option><option value="EH">Western Sahara</option><option value="YE">Yemen</option><option value="YU">Yugoslavia</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option></select>');					
+					}
+					else {
+						$(this).closest('tr').find('.v1').html('<input class="form-control form-control-sm" type="text" name="Criteria">');
+					}
+				});
+	
+	
+			});
+			
+			
+			
+$(document).ready(function() {
+
+	$(document).on("click", ".open-contact-dialog", function () {
+	 
+		$('#MessageResult').html('');
+
+		 var memberName = $(this).data('member');		 
+		 $(".modal-header #MemberName").html(memberName);					 
+		 
+		 var profileId = $(this).data('id');		 
+		 $(".modal-body #ProfileId").val(profileId);
+		 
+		 var email = $(this).data('email');		 
+		 $(".modal-body #ProfileEmail").val(email);					 
+
+		$('#SenderNameHelpBlock').remove();
+		$('#SenderEmailHelpBlock').remove();
+		$('#SubjectHelpBlock').remove();
+		$('#MessageHelpBlock').remove();
+		$('#RecaptchaHelpBlock').remove();
+
+		$('#SenderName').css({"border-color": "#c5c6c7"})
+		$('#SenderEmail').css({"border-color": "#c5c6c7"})
+		$('#Subject').css({"border-color": "#c5c6c7"})
+		$('#SenderMessage').css({"border-color": "#c5c6c7"})
+		 
+		$('input[name=SenderName]').val("");
+		$('input[name=SenderPhone]').val("");
+		$('input[name=SenderEmail]').val("");
+		$('input[name=Subject]').val("");
+		$('textarea[name=SenderMessage]').val("");	
+		grecaptcha.reset();
+		
+		 // As pointed out in comments, 
+		 // it is unnecessary to have to manually call the modal.
+		 //$('#addBookDialog').modal('show');
+	});	
+				
+    // process the form
+    $('#messageModal').submit(function(event) {
+
+        // get the form data
+        // there are many ways to get this data using jQuery (you can use the class or id also)
+		
+		$('#SenderNameHelpBlock').remove();
+		$('#SenderEmailHelpBlock').remove();
+		$('#SubjectHelpBlock').remove();
+		$('#MessageHelpBlock').remove();
+		$('#RecaptchaHelpBlock').remove();
+
+		$('#SenderName').css({"border-color": "#c5c6c7"})
+		$('#SenderEmail').css({"border-color": "#c5c6c7"})
+		$('#Subject').css({"border-color": "#c5c6c7"})
+		$('#SenderMessage').css({"border-color": "#c5c6c7"})
+				
+        var formData = {
+            'mode' 		 	  : $('input[name=Mode]').val(),			
+            'profileId'  	  : $('input[name=ProfileId]').val(),
+            'profileEmail'    : $('input[name=ProfileEmail]').val(),
+            'senderName'      : $('input[name=SenderName]').val(),
+            'senderPhone'     : $('input[name=SenderPhone]').val(),
+            'senderEmail'     : $('input[name=SenderEmail]').val(),
+            'subject'     	  : $('input[name=Subject]').val(),			
+            'senderMessage'   : $('textarea[name=SenderMessage]').val(),
+			'g-recaptcha-response'	: grecaptcha.getResponse()
+        };
+
+        // process the form
+        $.ajax({
+            type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+            url         : 'send_message.asp', // the url where we want to POST
+			data		: formData,			
+            dataType    : 'json', // what type of data do we expect back from the server
+            encode      : true
+        })
+			// using the done promise callback
+			.done(function(data) {
+
+				// log data to the console so we can see
+				//console.log(data); 
+
+				// here we will handle errors and validation messages
+				if ( ! data.success) {
+				
+					if (data.errors.SenderEmail) {
+						$('#SenderEmail').css({"border-color": "#a94442"})						
+						$('#SenderEmailGroup').append('<span id="SenderEmailHelpBlock" class="form-text" style="color: #a94442">' + data.errors.SenderEmail + '</span>');
+					}
+					
+					if (data.errors.SenderName) {
+						$('#SenderName').css({"border-color": "#a94442"})						
+						$('#SenderNameGroup').append('<span id="SenderNameHelpBlock" class="form-text" style="color: #a94442">' + data.errors.SenderName + '</span>');
+					}
+					
+					if (data.errors.Subject) {
+						$('#Subject').css({"border-color": "#a94442"})						
+						$('#SubjectGroup').append('<span id="SubjectHelpBlock" class="form-text" style="color: #a94442">' + data.errors.Subject + '</span>');
+					}					
+
+					if (data.errors.Message) {
+						$('#SenderMessage').css({"border-color": "#a94442"})
+						$('#MessageGroup').append('<span id="MessageHelpBlock" class="form-text" style="color: #a94442">' + data.errors.Message + '</span>');
+					}					
+
+					if (data.errors.Recaptcha) {
+						//$('#Recaptcha').css({"border-color": "#a94442"})											
+						$('#RecaptchaGroup').append('<span id="RecaptchaHelpBlock" class="form-text" style="color: #a94442">' + data.errors.Recaptcha + '</span>');
+					}
+					
+					grecaptcha.reset();
+					
+				} else {
+
+					// ALL GOOD! just show the success message!
+					//$('form').append('<div class="alert alert-success">' + data.message + '</div>');
+					
+//					$('#PropertyQuestion').prepend('<div id="FormSavedQuestion" class="form-saved">Thank You! Your Question Has Been Submitted.</div>');					
+
+					$('#MessageResult').html('<div style="padding: 10px; border: 1px solid #69a73d; margin-bottom: 20px; color: #69a73d; font-weight:bold;">Thank You! Your contact request has been sent.</div>');
+					
+					$('input[name=SenderName]').val("");
+					$('input[name=SenderPhone]').val("");
+					$('input[name=SenderEmail]').val("");
+					$('input[name=Subject]').val("");
+					$('textarea[name=SenderMessage]').val("");					
+					
+					grecaptcha.reset();
+					
+					// usually after form submission, you'll want to redirect
+					
+					// window.location = '/thank-you'; // redirect a user to another page
+
+				}
+			})
+
+			
+
+			// using the fail promise callback
+			.fail(function(data) {
+				$('#PropertyQuestion').prepend('<div id="FormErrorQuestion" class="form-error">Oops! There was a problem submitting your question.</div>');					
+				// show any errors
+				// best to remove for production
+				//console.log(data);
+			});			
+			
+
+        // stop the form from submitting the normal way and refreshing the page
+        event.preventDefault();
+    });
+
+});			
+		</script>		
+		
+	</body>
+</html>
+
+

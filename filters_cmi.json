@@ -1,0 +1,50 @@
+{
+  "cmi_language": {
+    "type": "select",
+    "label": "CMI / Hub-CMI Language",
+    "options": [
+      {
+        "value": "CmiNo",
+        "label": "CMI / Hub-CMI No."
+      },
+      {
+        "value": "WorkCity",
+        "label": "Work City"
+      },
+      {
+        "value": "WorkState",
+        "label": "Work State"
+      },
+      {
+        "value": "WorkCountry",
+        "label": "Work Country"
+      },
+      {
+        "value": "All",
+        "label": "Match All Criteria"
+      },
+      {
+        "value": "Any",
+        "label": "Match Any Criteria"
+      }
+    ]
+  },
+  "cmi_state": {
+    "type": "select",
+    "label": "Work State",
+    "options": [
+      {
+        "value": "WorkCountry",
+        "label": "Work Country"
+      },
+      {
+        "value": "All",
+        "label": "Match All Criteria"
+      },
+      {
+        "value": "Any",
+        "label": "Match Any Criteria"
+      }
+    ]
+  }
+}

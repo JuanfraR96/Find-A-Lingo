@@ -426,3 +426,33 @@ button.loading {
     50% { transform: translateX(30px) rotate(180deg); }
     100% { transform: translateX(-30px) rotate(360deg); }
 }
+
+/* Registry Tabs */
+.registry-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.registry-tab {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.registry-tab:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.registry-tab.active {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
