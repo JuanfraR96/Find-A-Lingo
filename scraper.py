@@ -96,26 +96,32 @@ async def run_scraper(filters: dict) -> bytes:
                 async with page.expect_response(lambda r: "Member.aspx" in r.url and r.request.method == "POST", timeout=10000):
                     await page.select_option("select[name$='$ctl10']", value="50", timeout=3000)
                 await page.wait_for_timeout(2000)
+                print("Page size changed successfully.")
             except Exception as e:
-                print("Pagination dropdown not found or failed (maybe only 1 page of results).")
+                print(f"Pagination dropdown not found or failed: {e}")
             
             # Get total items/pages
             pages = 1
             try:
-                summary = await page.eval_on_selector("div[style='width:100%;text-align:right;'] span", "e => e.innerText", timeout=3000)
+                # wait for the element first so we can use a timeout
+                await page.wait_for_selector("div[style='width:100%;text-align:right;'] span", timeout=3000)
+                summary = await page.eval_on_selector("div[style='width:100%;text-align:right;'] span", "e => e.innerText")
                 # e.g., "282 items in 6 pages"
                 match = re.search(r'in (\d+) pages', summary)
                 if match:
                     pages = int(match.group(1))
-            except Exception:
-                pass
+                    print(f"Detected {pages} pages from summary: {summary}")
+            except Exception as e:
+                print(f"Failed to get pages summary: {e}")
             
             for i in range(1, pages + 1):
                 await page.wait_for_selector("#FormContentPlaceHolder_Panel_resultsGrid")
                 links = await page.eval_on_selector_all("a.fancybox", "elements => elements.map(e => e.href)")
+                print(f"Page {i} found {len(links)} links")
                 for link in links:
                     if link not in urls:
                         urls.append(link)
+                print(f"Total unique urls so far: {len(urls)}")
                 
                 if i < pages:
                     next_page_num = str(i + 1)
