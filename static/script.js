@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     
                     const defaultOpt = document.createElement("option");
                     defaultOpt.value = "";
-                    defaultOpt.textContent = "Any";
+                    defaultOpt.textContent = "Select";
                     select.appendChild(defaultOpt);
 
                     filter.options.forEach(opt => {
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         filterLabels.push(registryInput.value); // Add registry prefix
         
         selects.forEach(s => {
-            if (s.value && s.options[s.selectedIndex].text !== "Any") {
+            if (s.value && s.options[s.selectedIndex].text !== "Select") {
                 filterLabels.push(s.options[s.selectedIndex].text.toLowerCase().replace(/[^a-z0-9]/g, '-'));
             }
         });
