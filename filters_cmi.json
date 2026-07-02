@@ -4,28 +4,336 @@
     "label": "CMI / Hub-CMI Language",
     "options": [
       {
-        "value": "CmiNo",
-        "label": "CMI / Hub-CMI No."
+        "value": "12/05/2027",
+        "label": "12/05/2027"
       },
       {
-        "value": "WorkCity",
-        "label": "Work City"
+        "value": "Albanian",
+        "label": "Albanian"
       },
       {
-        "value": "WorkState",
-        "label": "Work State"
+        "value": "Amharic",
+        "label": "Amharic"
       },
       {
-        "value": "WorkCountry",
-        "label": "Work Country"
+        "value": "Arabic",
+        "label": "Arabic"
       },
       {
-        "value": "All",
-        "label": "Match All Criteria"
+        "value": "Armenian",
+        "label": "Armenian"
       },
       {
-        "value": "Any",
-        "label": "Match Any Criteria"
+        "value": "ASL",
+        "label": "ASL"
+      },
+      {
+        "value": "Bangla",
+        "label": "Bangla"
+      },
+      {
+        "value": "Bengali",
+        "label": "Bengali"
+      },
+      {
+        "value": "Bosnian",
+        "label": "Bosnian"
+      },
+      {
+        "value": "Brazilian Portuguese",
+        "label": "Brazilian Portuguese"
+      },
+      {
+        "value": "Bulgarian",
+        "label": "Bulgarian"
+      },
+      {
+        "value": "Burmese",
+        "label": "Burmese"
+      },
+      {
+        "value": "Cambodian",
+        "label": "Cambodian"
+      },
+      {
+        "value": "Cambodian/Khmer",
+        "label": "Cambodian/Khmer"
+      },
+      {
+        "value": "Cantonese",
+        "label": "Cantonese"
+      },
+      {
+        "value": "Cebuado",
+        "label": "Cebuado"
+      },
+      {
+        "value": "Cebuano",
+        "label": "Cebuano"
+      },
+      {
+        "value": "Croatian",
+        "label": "Croatian"
+      },
+      {
+        "value": "Czech",
+        "label": "Czech"
+      },
+      {
+        "value": "Dari",
+        "label": "Dari"
+      },
+      {
+        "value": "Dari, Farsi",
+        "label": "Dari, Farsi"
+      },
+      {
+        "value": "Dari, Farsi,  Pashto",
+        "label": "Dari, Farsi,  Pashto"
+      },
+      {
+        "value": "Dari/ Farsi",
+        "label": "Dari/ Farsi"
+      },
+      {
+        "value": "Dari/Farsi",
+        "label": "Dari/Farsi"
+      },
+      {
+        "value": "Dari/Pashto",
+        "label": "Dari/Pashto"
+      },
+      {
+        "value": "Farsi",
+        "label": "Farsi"
+      },
+      {
+        "value": "Farsi/Dari",
+        "label": "Farsi/Dari"
+      },
+      {
+        "value": "French",
+        "label": "French"
+      },
+      {
+        "value": "French/wolof",
+        "label": "French/wolof"
+      },
+      {
+        "value": "Georgian",
+        "label": "Georgian"
+      },
+      {
+        "value": "German",
+        "label": "German"
+      },
+      {
+        "value": "Haitian Creole",
+        "label": "Haitian Creole"
+      },
+      {
+        "value": "Haitian-Creole",
+        "label": "Haitian-Creole"
+      },
+      {
+        "value": "Hebrew",
+        "label": "Hebrew"
+      },
+      {
+        "value": "Hindi",
+        "label": "Hindi"
+      },
+      {
+        "value": "Hmong",
+        "label": "Hmong"
+      },
+      {
+        "value": "Hungarian",
+        "label": "Hungarian"
+      },
+      {
+        "value": "Ilocano",
+        "label": "Ilocano"
+      },
+      {
+        "value": "Italian",
+        "label": "Italian"
+      },
+      {
+        "value": "Japanese",
+        "label": "Japanese"
+      },
+      {
+        "value": "Karen / Burmese",
+        "label": "Karen / Burmese"
+      },
+      {
+        "value": "Khmer",
+        "label": "Khmer"
+      },
+      {
+        "value": "Kinyarwanda",
+        "label": "Kinyarwanda"
+      },
+      {
+        "value": "Kirundi",
+        "label": "Kirundi"
+      },
+      {
+        "value": "Korean",
+        "label": "Korean"
+      },
+      {
+        "value": "Kurdic",
+        "label": "Kurdic"
+      },
+      {
+        "value": "Kurdish",
+        "label": "Kurdish"
+      },
+      {
+        "value": "Kurdish (Sorani)",
+        "label": "Kurdish (Sorani)"
+      },
+      {
+        "value": "Lao",
+        "label": "Lao"
+      },
+      {
+        "value": "Laotian",
+        "label": "Laotian"
+      },
+      {
+        "value": "Lingala",
+        "label": "Lingala"
+      },
+      {
+        "value": "Mandarin",
+        "label": "Mandarin"
+      },
+      {
+        "value": "Marsallese",
+        "label": "Marsallese"
+      },
+      {
+        "value": "Marshallese",
+        "label": "Marshallese"
+      },
+      {
+        "value": "Mongolian",
+        "label": "Mongolian"
+      },
+      {
+        "value": "Nepali",
+        "label": "Nepali"
+      },
+      {
+        "value": "Panjabi",
+        "label": "Panjabi"
+      },
+      {
+        "value": "Pashto",
+        "label": "Pashto"
+      },
+      {
+        "value": "Persian",
+        "label": "Persian"
+      },
+      {
+        "value": "Persian/Farsi",
+        "label": "Persian/Farsi"
+      },
+      {
+        "value": "Polish",
+        "label": "Polish"
+      },
+      {
+        "value": "Portuguese",
+        "label": "Portuguese"
+      },
+      {
+        "value": "Portuguese -Brazilian",
+        "label": "Portuguese -Brazilian"
+      },
+      {
+        "value": "Punjabi",
+        "label": "Punjabi"
+      },
+      {
+        "value": "Romanian",
+        "label": "Romanian"
+      },
+      {
+        "value": "Russian",
+        "label": "Russian"
+      },
+      {
+        "value": "Serbian",
+        "label": "Serbian"
+      },
+      {
+        "value": "Slovak",
+        "label": "Slovak"
+      },
+      {
+        "value": "Somali",
+        "label": "Somali"
+      },
+      {
+        "value": "Spanish",
+        "label": "Spanish"
+      },
+      {
+        "value": "Swahili",
+        "label": "Swahili"
+      },
+      {
+        "value": "Tagalog",
+        "label": "Tagalog"
+      },
+      {
+        "value": "Tedim",
+        "label": "Tedim"
+      },
+      {
+        "value": "Telugu",
+        "label": "Telugu"
+      },
+      {
+        "value": "Thai",
+        "label": "Thai"
+      },
+      {
+        "value": "Tigrigna",
+        "label": "Tigrigna"
+      },
+      {
+        "value": "Tigrinya",
+        "label": "Tigrinya"
+      },
+      {
+        "value": "Turkish",
+        "label": "Turkish"
+      },
+      {
+        "value": "Ukrainian",
+        "label": "Ukrainian"
+      },
+      {
+        "value": "Urdu",
+        "label": "Urdu"
+      },
+      {
+        "value": "Uzbek",
+        "label": "Uzbek"
+      },
+      {
+        "value": "Vietnamese",
+        "label": "Vietnamese"
+      },
+      {
+        "value": "Yoruba",
+        "label": "Yoruba"
       }
     ]
   },
@@ -34,16 +342,208 @@
     "label": "Work State",
     "options": [
       {
-        "value": "WorkCountry",
-        "label": "Work Country"
+        "value": "AL",
+        "label": "Alabama"
       },
       {
-        "value": "All",
-        "label": "Match All Criteria"
+        "value": "AK",
+        "label": "Alaska"
       },
       {
-        "value": "Any",
-        "label": "Match Any Criteria"
+        "value": "AZ",
+        "label": "Arizona"
+      },
+      {
+        "value": "AR",
+        "label": "Arkansas"
+      },
+      {
+        "value": "CA",
+        "label": "California"
+      },
+      {
+        "value": "CO",
+        "label": "Colorado"
+      },
+      {
+        "value": "CT",
+        "label": "Connecticut"
+      },
+      {
+        "value": "DE",
+        "label": "Delaware"
+      },
+      {
+        "value": "DC",
+        "label": "District of Columbia"
+      },
+      {
+        "value": "FL",
+        "label": "Florida"
+      },
+      {
+        "value": "GA",
+        "label": "Georgia"
+      },
+      {
+        "value": "HI",
+        "label": "Hawaii"
+      },
+      {
+        "value": "ID",
+        "label": "Idaho"
+      },
+      {
+        "value": "IL",
+        "label": "Illinois"
+      },
+      {
+        "value": "IN",
+        "label": "Indiana"
+      },
+      {
+        "value": "IA",
+        "label": "Iowa"
+      },
+      {
+        "value": "KS",
+        "label": "Kansas"
+      },
+      {
+        "value": "KY",
+        "label": "Kentucky"
+      },
+      {
+        "value": "LA",
+        "label": "Louisiana"
+      },
+      {
+        "value": "ME",
+        "label": "Maine"
+      },
+      {
+        "value": "MD",
+        "label": "Maryland"
+      },
+      {
+        "value": "MA",
+        "label": "Massachusetts"
+      },
+      {
+        "value": "MI",
+        "label": "Michigan"
+      },
+      {
+        "value": "MN",
+        "label": "Minnesota"
+      },
+      {
+        "value": "MS",
+        "label": "Mississippi"
+      },
+      {
+        "value": "MO",
+        "label": "Missouri"
+      },
+      {
+        "value": "MT",
+        "label": "Montana"
+      },
+      {
+        "value": "NE",
+        "label": "Nebraska"
+      },
+      {
+        "value": "NV",
+        "label": "Nevada"
+      },
+      {
+        "value": "NH",
+        "label": "New Hampshire"
+      },
+      {
+        "value": "NJ",
+        "label": "New Jersey"
+      },
+      {
+        "value": "NM",
+        "label": "New Mexico"
+      },
+      {
+        "value": "NY",
+        "label": "New York"
+      },
+      {
+        "value": "NC",
+        "label": "North Carolina"
+      },
+      {
+        "value": "ND",
+        "label": "North Dakota"
+      },
+      {
+        "value": "OH",
+        "label": "Ohio"
+      },
+      {
+        "value": "OK",
+        "label": "Oklahoma"
+      },
+      {
+        "value": "OR",
+        "label": "Oregon"
+      },
+      {
+        "value": "PA",
+        "label": "Pennsylvania"
+      },
+      {
+        "value": "RI",
+        "label": "Rhode Island"
+      },
+      {
+        "value": "SC",
+        "label": "South Carolina"
+      },
+      {
+        "value": "SD",
+        "label": "South Dakota"
+      },
+      {
+        "value": "TN",
+        "label": "Tennessee"
+      },
+      {
+        "value": "TX",
+        "label": "Texas"
+      },
+      {
+        "value": "UT",
+        "label": "Utah"
+      },
+      {
+        "value": "VE",
+        "label": "Vermont"
+      },
+      {
+        "value": "VA",
+        "label": "Virginia"
+      },
+      {
+        "value": "WA",
+        "label": "Washington"
+      },
+      {
+        "value": "WV",
+        "label": "West Virginia"
+      },
+      {
+        "value": "WI",
+        "label": "Wisconsin"
+      },
+      {
+        "value": "WY",
+        "label": "Wyoming"
       }
     ]
   }
