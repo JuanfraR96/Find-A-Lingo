@@ -74,16 +74,15 @@ async def run_scraper_cmi(filters: dict):
             for row in rows[1:]:
                 cells = await row.locator("td").all_inner_texts()
                 if len(cells) >= 7:
-                    # Cells structure from our grep:
-                    # 0: Index
-                    # 1: Contact Icon
-                    # 2: Name
-                    # 3: Type
-                    # 4: Expires
-                    # 5: Language
-                    # 6: City/State/Country
+                    # Extract email from the <a> tag in the second cell
+                    email = ""
+                    a_tag = row.locator("td").nth(1).locator("a")
+                    if await a_tag.count() > 0:
+                        email = await a_tag.first.get_attribute("data-email") or ""
+                        
                     person = {
                         "Name": cells[2].strip(),
+                        "Email": email.strip(),
                         "Type": cells[3].strip(),
                         "Expires": cells[4].strip(),
                         "Language": cells[5].strip(),
@@ -98,12 +97,13 @@ async def run_scraper_cmi(filters: dict):
     ws = wb.active
     ws.title = "CMI Registry Results"
     
-    headers = ["Name", "Type", "Expires", "Language", "Location"]
+    headers = ["Name", "Email", "Type", "Expires", "Language", "Location"]
     ws.append(headers)
     
     for p in people:
         ws.append([
             p.get("Name", ""),
+            p.get("Email", ""),
             p.get("Type", ""),
             p.get("Expires", ""),
             p.get("Language", ""),
