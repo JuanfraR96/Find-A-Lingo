@@ -92,9 +92,10 @@ async def run_scraper(filters: dict) -> bytes:
             await page.wait_for_selector("#FormContentPlaceHolder_Panel_resultsGrid", timeout=10000)
             
             try:
-                # Change page size to 50 using CSS suffix selector to avoid dynamic row index issues
-                async with page.expect_navigation(timeout=10000):
+                # Change page size to 50 using CSS suffix selector
+                async with page.expect_response(lambda r: "Member.aspx" in r.url and r.request.method == "POST", timeout=10000):
                     await page.select_option("select[name$='$ctl10']", value="50", timeout=3000)
+                await page.wait_for_timeout(2000)
             except Exception as e:
                 print("Pagination dropdown not found or failed (maybe only 1 page of results).")
             
@@ -119,11 +120,11 @@ async def run_scraper(filters: dict) -> bytes:
                 if i < pages:
                     next_page_num = str(i + 1)
                     try:
-                        async with page.expect_navigation(timeout=15000):
+                        async with page.expect_response(lambda r: "Member.aspx" in r.url and r.request.method == "POST", timeout=15000):
                             await page.evaluate(f"__doPostBack('ctl00$FormContentPlaceHolder$Panel$resultsGrid','Page${next_page_num}')")
+                        await page.wait_for_timeout(2000)
                     except Exception as e:
                         print(f"Error navigating to page {next_page_num}: {e}")
-                        # Fallback: wait a bit just in case it was an AJAX update instead of full nav
                         await page.wait_for_timeout(3000)
                     
         except Exception as e:
